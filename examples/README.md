@@ -10,4 +10,5 @@ the same fictional population, disease, and period. This supports enabling the
 optional subset check; it makes no statement about real datasets.
 
 example-report.json and example-summary.txt are generated from
-synthetic_issues.csv with the explicit subset basis in the root README.
+synthetic_issues.csv with the explicit synthetic subset basis. The root README provides both
+commands under “Try the synthetic example”; they produce 5 errors and 2 warnings.
