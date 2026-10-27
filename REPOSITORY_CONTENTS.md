@@ -1,13 +1,15 @@
-# Final proposed repository contents
+# Repository contents
 
-These are the exact files in the GitHub review archive. No remote repository,
-tag or release exists. MIT remains a proposal in LICENSE.proposed.
+Source code is public on GitHub. The code license is MIT (LICENSE).
+A tagged prerelease has not been published.
+
+The original review archive also contained .gitignore; it was not present in
+the initial web upload.
 
 | Path |
 | --- |
-| `.gitignore` |
 | `CHANGELOG.md` |
-| `LICENSE.proposed` |
+| `LICENSE` |
 | `MANIFEST.in` |
 | `PROGRESS.md` |
 | `README.md` |
