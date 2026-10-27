@@ -1,0 +1,9 @@
+include README.md PROGRESS.md CHANGELOG.md RELEASE.md LICENSE.proposed REPOSITORY_CONTENTS.md
+recursive-include src *.py
+recursive-include tests *.py
+recursive-include tools *.py
+recursive-include docs *.md
+recursive-include examples *.csv *.json *.txt *.md
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod]

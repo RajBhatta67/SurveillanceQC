@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surveillanceqc"
+version = "0.1.1rc1"
+description = "Local, transparent checks for aggregate surveillance count CSVs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+audit = ["openpyxl==3.1.5"]
+
+[project.scripts]
+surveillanceqc = "surveillanceqc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

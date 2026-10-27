@@ -1,0 +1,8 @@
+country,period,total_cases,lab_confirmed
+Exampleland,2024-01,10,8
+Exampleland,2024-01,10,8
+Exampleland,2024-03,,3
+Sample Republic,2024-13,5,2
+Sample Republic,2024-02,-2,1
+Sample Republic,2024-03,twelve,2
+Sample Republic,2024-04,3,5

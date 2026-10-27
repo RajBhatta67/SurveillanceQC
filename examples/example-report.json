@@ -1,0 +1,124 @@
+{
+  "report_version": "1.0",
+  "tool_version": "0.1.1rc1",
+  "source": {
+    "name": "synthetic_issues.csv",
+    "sha256": "585992494ef242a8e7af8ac0aee35d794eb35d67f5f0061fb2c3273e43f2d221"
+  },
+  "config": {
+    "country": "country",
+    "period": "period",
+    "counts": [
+      "total_cases",
+      "lab_confirmed"
+    ],
+    "frequency": "month",
+    "key_columns": [],
+    "missing_tokens": [],
+    "lab": "lab_confirmed",
+    "total": "total_cases",
+    "subset_basis": "Synthetic fixture: lab cases are included in total for the same fictional population, disease and month; see examples/README.md"
+  },
+  "rows_read": 7,
+  "analysis_complete": true,
+  "subset_check": "enabled_by_user",
+  "findings": [
+    {
+      "code": "DUPLICATE_KEY",
+      "severity": "error",
+      "message": "Repeated configured identity and reporting period; review strata or revisions.",
+      "rows": [
+        2,
+        3
+      ],
+      "columns": [
+        "country",
+        "period"
+      ],
+      "context": {}
+    },
+    {
+      "code": "MISSING_COUNT",
+      "severity": "warning",
+      "message": "Count is missing; no zero was substituted.",
+      "rows": [
+        4
+      ],
+      "columns": [
+        "total_cases"
+      ],
+      "context": {}
+    },
+    {
+      "code": "INVALID_PERIOD",
+      "severity": "error",
+      "message": "Period must be YYYY-MM (month) or YYYY (year), as configured.",
+      "rows": [
+        5
+      ],
+      "columns": [
+        "period"
+      ],
+      "context": {}
+    },
+    {
+      "code": "NEGATIVE_COUNT",
+      "severity": "error",
+      "message": "Count is negative under the configured count schema.",
+      "rows": [
+        6
+      ],
+      "columns": [
+        "total_cases"
+      ],
+      "context": {}
+    },
+    {
+      "code": "INVALID_COUNT",
+      "severity": "error",
+      "message": "Count must be a finite whole number; rates and separators are unsupported.",
+      "rows": [
+        7
+      ],
+      "columns": [
+        "total_cases"
+      ],
+      "context": {}
+    },
+    {
+      "code": "SUBSET_EXCEEDS_TOTAL",
+      "severity": "error",
+      "message": "Lab count exceeds total under the user-declared subset definition.",
+      "rows": [
+        8
+      ],
+      "columns": [
+        "lab_confirmed",
+        "total_cases"
+      ],
+      "context": {}
+    },
+    {
+      "code": "PERIOD_GAP",
+      "severity": "warning",
+      "message": "Interior period(s) absent; confirm the expected reporting schedule.",
+      "rows": [],
+      "columns": [
+        "country",
+        "period"
+      ],
+      "context": {
+        "group": {
+          "country": "Exampleland"
+        },
+        "first_missing": "2024-02",
+        "last_missing": "2024-02",
+        "missing_period_count": 1
+      }
+    }
+  ],
+  "summary": {
+    "error": 5,
+    "warning": 2
+  }
+}

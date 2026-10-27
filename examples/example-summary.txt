@@ -1,0 +1,13 @@
+SurveillanceQC 0.1.1rc1 — synthetic_issues.csv
+7 records; 5 error(s); 2 warning(s)
+Analysis complete: True
+Subset check: enabled_by_user
+ERROR DUPLICATE_KEY (records [2, 3]; country, period): Repeated configured identity and reporting period; review strata or revisions.
+WARNING MISSING_COUNT (records [4]; total_cases): Count is missing; no zero was substituted.
+ERROR INVALID_PERIOD (records [5]; period): Period must be YYYY-MM (month) or YYYY (year), as configured.
+ERROR NEGATIVE_COUNT (records [6]; total_cases): Count is negative under the configured count schema.
+ERROR INVALID_COUNT (records [7]; total_cases): Count must be a finite whole number; rates and separators are unsupported.
+ERROR SUBSET_EXCEEDS_TOTAL (records [8]; lab_confirmed, total_cases): Lab count exceeds total under the user-declared subset definition.
+WARNING PERIOD_GAP (file/group; country, period): Interior period(s) absent; confirm the expected reporting schedule.
+  {"first_missing": "2024-02", "group": {"country": "Exampleland"}, "last_missing": "2024-02", "missing_period_count": 1}
+Findings assess the configured schema; they do not validate surveillance accuracy.
