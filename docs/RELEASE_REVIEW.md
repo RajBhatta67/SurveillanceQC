@@ -1,30 +1,21 @@
-# Release candidate review — 0.1.1rc1
+# Release review — 0.1.1rc1
 
-Status: local candidate prepared for review; nothing published. User explicitly
-requested no publication. No remote repository was created.
+Source code is public at https://github.com/RajBhatta67/SurveillanceQC.
+The owner approved adopting the proposed MIT license on October 26, 2026.
+The tagged prerelease and PyPI package have not been published.
 
-Included: Python package/CLI, new audit script, tests, documentation, synthetic
-CSV fixtures and their generated example reports. No research datasets,
-workbooks, notebooks, manuscripts, normalized real-data projections or full
-real-data reports are in the clean source candidate. Audit evidence belongs to
-the separate private review bundle. Source and wheel contents are inspected
-before delivery; no public package-name availability or adopted license is asserted. MIT is
-proposed in LICENSE.proposed, pending review.
+Code and software documentation use LICENSE (MIT). Research datasets and
+third-party material are outside this license grant. AI tools assisted with
+implementation, tests, documentation, and review; see README.md.
 
-Validated: 48 tests with optional workbook dependency, existing six-CSV handoff
-plus September workbook audit, unchanged original hashes and prior finding
-counts. See ROBUSTNESS_REVIEW.md for exact changes and WALKTHROUGH.md for one
-actual finding and explanation questions. Core rules are unchanged.
+Validation: the candidate passed 48 tests from source and against an installed
+wheel on Python 3.12. Only Python 3.12 has been tested. Later changes in this
+cleanup affect documentation and license metadata, not runtime code.
 
-Before any publication:
-- User reviews candidate and explains the key decisions and limitations.
-- Review the MIT proposal and proposed holder Raj Bhatta. If approved, adopt
-  LICENSE.proposed as LICENSE and declare the adopted license in metadata.
-- Confirm attribution/assistance, repository owner and public name.
-- Describe Python support accurately: only 3.12 tested; metadata requires 3.10+,
-  but 3.10, 3.11 and other versions remain unverified.
-- Review exact release contents and metadata; confirm no research data included.
-- Confirm dataset reuse terms before adding any public real-data fixture.
-- Obtain approval for the concrete repository/tag/package to publish.
+The repository contains code, tests, documentation and synthetic examples.
+Research data, workbooks, notebooks, manuscripts and full real-data audit reports
+are excluded. See RESEARCH_DATA_CHECK.md for the historical audit assessment.
 
-Package availability is not evidence of adoption or public-health impact.
+Before a tagged prerelease, review the exact target commit and release notes.
+Verify reuse terms before adding any public research-data fixtures. A public
+repository or release does not establish adoption or public-health impact.
