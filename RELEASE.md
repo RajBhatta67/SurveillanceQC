@@ -1,7 +1,7 @@
 # SurveillanceQC v0.1.1rc1 — first public preview
 
 DRAFT FOR REVIEW. Proposed tag: v0.1.1rc1. Proposed GitHub status: prerelease.
-No repository, tag or release has been published. Code license remains proposed.
+Source code is public on GitHub under MIT. This tagged prerelease is not yet published.
 
 SurveillanceQC is a small Python CLI for checking aggregate surveillance count
 CSVs before analysis. It produces JSON findings or a readable summary for schema
@@ -23,7 +23,7 @@ It excludes research datasets, workbooks, manuscripts, notebooks and full resear
 audit reports. Errors indicate violations of a configured contract, not proven
 source-agency errors. This is not a validated public-health tool; passing checks
 does not establish surveillance accuracy or completeness, and no adoption or
-impact is claimed. MIT is proposed for the code, pending owner review.
+impact is claimed. Code and software documentation are MIT licensed; upstream datasets are excluded.
 
 Install from the repository root with `python -m pip install .`, then run:
 
