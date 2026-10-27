@@ -4,8 +4,7 @@ A small Python command-line tool for checking aggregate infectious-disease
 surveillance count CSVs before analysis. It reports findings against an explicit
 schema and leaves the input unchanged.
 
-**Version:** 0.1.1rc1, public source preview on GitHub. A tagged prerelease
-has not yet been published.
+**Version:** 0.1.1rc1, public source preview on GitHub. 
 **Python:** package metadata requires 3.10+; **only Python 3.12 has been tested**
 (local runtime: 3.12.14). Python 3.10, 3.11 and other versions are unverified.
 
