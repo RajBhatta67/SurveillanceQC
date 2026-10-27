@@ -7,6 +7,7 @@ name = "surveillanceqc"
 version = "0.1.1rc1"
 description = "Local, transparent checks for aggregate surveillance count CSVs"
 readme = "README.md"
+license = {file = "LICENSE"}
 requires-python = ">=3.10"
 dependencies = []
 
