@@ -4,7 +4,8 @@ A small Python command-line tool for checking aggregate infectious-disease
 surveillance count CSVs before analysis. It reports findings against an explicit
 schema and leaves the input unchanged.
 
-**Version:** 0.1.1rc1, proposed first public preview. Not published yet.
+**Version:** 0.1.1rc1, public source preview on GitHub. A tagged prerelease
+has not yet been published.
 **Python:** package metadata requires 3.10+; **only Python 3.12 has been tested**
 (local runtime: 3.12.14). Python 3.10, 3.11 and other versions are unverified.
 
@@ -61,6 +62,15 @@ means no findings at the chosen threshold; **2** means usage/configuration,
 file-access or encoding failure. Use `--fail-on warning` to include warnings in
 the failure threshold. Redirect only to a new output file, never the input CSV.
 
+To reproduce the bundled example reports with the synthetic subset definition:
+
+```sh
+python -m surveillanceqc examples/synthetic_issues.csv --subset-basis "Synthetic fixture: lab cases are included in total for the same fictional population, disease and month; see examples/README.md" > report-with-subset.json
+python -m surveillanceqc examples/synthetic_issues.csv --subset-basis "Synthetic fixture: lab cases are included in total for the same fictional population, disease and month; see examples/README.md" --format text > summary-with-subset.txt
+```
+
+These commands intentionally exit **1**, with **5 errors and 2 warnings**.
+
 ## Definitions and limitations
 
 - Blank cells remain missing. Add explicit markers with `--missing-token NA`;
@@ -100,10 +110,11 @@ See [usage](docs/USAGE.md), [design](docs/DESIGN.md),
 [robustness fixes](docs/ROBUSTNESS_REVIEW.md), and the
 [one-finding walkthrough](docs/WALKTHROUGH.md).
 
-## Proposed license — pending review
+## License and development
 
-MIT is proposed for the code and software documentation; see
-[LICENSE.proposed](LICENSE.proposed). The draft is **not yet adopted**. Its
-proposed copyright holder is Raj Bhatta, subject to review. It does not license
-underlying research datasets or third-party material. No approved code license
-is declared in package metadata yet.
+Code and software documentation are available under the [MIT license](LICENSE).
+This does not grant rights to upstream datasets or third-party material.
+
+AI tools assisted with implementation, tests, documentation, and code review.
+The project's research motivation comes from Raj Bhatta's measles/rubella analysis.
+
