@@ -50,3 +50,10 @@ proposed prerelease description. REPOSITORY_CONTENTS.md lists exact files.
 Only documentation, ignore rules and source-archive manifest changed; no features
 or Python implementation/tests changed. Working synthetic commands rechecked.
 No repository, tag, GitHub release or PyPI publication created.
+
+## October 26 publication-status update
+
+Source uploaded publicly to RajBhatta67/SurveillanceQC. Owner approved MIT;
+LICENSE replaces the proposal. README documents AI assistance and both synthetic
+example modes. A tagged prerelease and PyPI publication remain pending.
+Earlier local-build entries above describe the state at the time of those runs.
